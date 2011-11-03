@@ -1,3 +1,9 @@
+# revision 24411
+# category Package
+# catalog-ctan /macros/latex/contrib/gauss
+# catalog-date 2011-10-26 17:26:33 +0200
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-gauss
 Version:	20111026
 Release:	1
@@ -40,6 +46,7 @@ and column operations on matrices (a.k.a. Gaussian operations).
 %doc %{_texmfdistdir}/doc/latex/gauss/gauss-doc.pdf
 %doc %{_texmfdistdir}/doc/latex/gauss/gauss-ex.pdf
 %doc %{_texmfdistdir}/doc/latex/gauss/gauss-ex.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -50,3 +57,5 @@ and column operations on matrices (a.k.a. Gaussian operations).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
