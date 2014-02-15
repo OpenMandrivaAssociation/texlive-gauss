@@ -1,12 +1,12 @@
-# revision 24411
+# revision 32934
 # category Package
 # catalog-ctan /macros/latex/contrib/gauss
-# catalog-date 2011-10-26 17:26:33 +0200
+# catalog-date 2012-04-10 17:44:48 +0200
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-gauss
-Version:	20111026
-Release:	6
+Version:	20120410
+Release:	1
 Summary:	A package for Gaussian operations
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gauss
@@ -47,17 +47,3 @@ and column operations on matrices (a.k.a. Gaussian operations).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111026-2
-+ Revision: 752187
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111026-1
-+ Revision: 718523
-- texlive-gauss
-- texlive-gauss
-- texlive-gauss
-- texlive-gauss
-
