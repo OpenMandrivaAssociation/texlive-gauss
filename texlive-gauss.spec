@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-gauss
 Version:	20120410
-Release:	1
+Release:	2
 Summary:	A package for Gaussian operations
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gauss
