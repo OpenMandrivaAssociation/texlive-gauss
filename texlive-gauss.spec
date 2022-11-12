@@ -1,18 +1,12 @@
-# revision 32934
-# category Package
-# catalog-ctan /macros/latex/contrib/gauss
-# catalog-date 2012-04-10 17:44:48 +0200
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-gauss
-Version:	20190228
+Version:	32934
 Release:	1
 Summary:	A package for Gaussian operations
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gauss
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gauss.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gauss.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gauss.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gauss.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,12 +17,12 @@ The gauss package provides configurable tools for producing row
 and column operations on matrices (a.k.a. Gaussian operations).
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -40,7 +34,7 @@ and column operations on matrices (a.k.a. Gaussian operations).
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
